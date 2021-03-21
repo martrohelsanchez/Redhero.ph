@@ -1,3 +1,5 @@
-const routes = {};
+const routes = {
+  ROOT: '/',
+};
 
 export default routes;
