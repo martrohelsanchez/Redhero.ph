@@ -4,9 +4,9 @@ const routes = {
   FIND_INSTITUTIONS: '/find-blood/institutions',
   FIND_DONORS: '/donors',
   PATIENT_BLOOD_TYPE: '/patient-blood-type',
-  LOGIN_PROMPT: '/log-prompt',
+  LOGIN_PROMPT: '/login-prompt',
   LOGIN: '/login',
-  SIGN_UP: '/sign_up',
+  SIGN_UP: '/sign-up',
 };
 
 export default routes;

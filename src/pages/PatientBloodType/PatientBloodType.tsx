@@ -12,7 +12,7 @@ function PatientBloodType(props: RouteComponentProps) {
   const [bloodType, setBloodType] = useState('');
 
   function next() {
-    props.history.push(routes.LOGIN_PROMPT);
+    props.history.push(routes.SIGN_UP);
   }
 
   const bloodTypes = BLOOD_TYPES.map((bloodType) => (

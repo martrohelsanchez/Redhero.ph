@@ -8,6 +8,7 @@ declare module 'styled-components' {
       primaryLight1: string;
       white1: string;
       white1Opacity1: string;
+      fb: string;
     };
     device: {
       mobileS: string;
@@ -26,6 +27,7 @@ declare module 'styled-components' {
       text1: string;
       text2: string;
       text3: string;
+      text4: string;
     };
     fontWeights: {
       heavy: number;
@@ -45,6 +47,8 @@ const colors = {
 
   white1: '#F5F5F8',
   white1Opacity1: rgba('#F5F5F8', 0.63),
+
+  fb: '#4E6CAC',
 };
 
 const fontWeights = {
@@ -60,6 +64,7 @@ const fontSizes = {
   text1: rem('27px'),
   text2: rem('19px'),
   text3: rem('17px'),
+  text4: rem('21px'),
 };
 
 const fontFamilies = {
