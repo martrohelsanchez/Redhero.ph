@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Flex, FlexCenter, Text } from 'src/components';
+import { Box, FlexCenter, Text } from 'src/components';
 
 import facebokIconImg from 'src/assets/images/facebookIcon.svg';
 import googleIconImg from 'src/assets/images/googleIcon.png';
@@ -12,8 +12,8 @@ function SignUp() {
 
   function signUpWithFacebok() {}
 
-  const googleIcon = <S.GoggleIcon height="33px" src={googleIconImg} />;
-  const facebookIcon = <img height="33px" src={facebokIconImg} />;
+  const googleIcon = <img alt="Google Icon" height="33px" src={googleIconImg} />;
+  const facebookIcon = <img alt="Facebook Icon" height="33px" src={facebokIconImg} />;
 
   return (
     <MainLayout>

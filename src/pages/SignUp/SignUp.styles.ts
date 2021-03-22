@@ -11,18 +11,17 @@ export const Bottom = styled(Flex)`
   right: 0;
 `;
 
-export const GoggleBtn = styled(Button)`
+const SignUpBtn = styled(Button)`
+  font-weight: ${(props) => props.theme.fontWeights.semibold};
+  font-size: ${(props) => props.theme.fontSizes.text4};
+`;
+
+export const GoggleBtn = styled(SignUpBtn)`
   margin-bottom: 24px;
   color: black;
-  font-weight: ${(props) => props.theme.fontWeights.semibold};
-  font-size: ${(props) => props.theme.fontSizes.text4};
 `;
 
-export const FacebookBtn = styled(Button)`
+export const FacebookBtn = styled(SignUpBtn)`
   color: white;
-  font-weight: ${(props) => props.theme.fontWeights.semibold};
-  font-size: ${(props) => props.theme.fontSizes.text4};
   background-color: ${(props) => props.theme.colors.fb};
 `;
-
-export const GoggleIcon = styled.img``;
