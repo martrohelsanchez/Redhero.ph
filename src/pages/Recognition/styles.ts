@@ -1,7 +1,7 @@
 import { rem } from 'polished';
 import styled from 'styled-components';
 
-import { Flex, Text } from 'src/components';
+import { Flex } from 'src/components';
 
 export const Bottom = styled(Flex)`
   display: flex;
