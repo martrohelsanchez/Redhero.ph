@@ -7,10 +7,13 @@ import { Box, Flex, Text } from 'src/components';
 import { useHistory } from 'react-router';
 
 type Props = {
+  className?: string;
   children?: React.ReactNode;
 };
 
-function MainLayout({ children }: Props) {
+function MainLayout(props: Props) {
+  const { children, className } = props;
+
   const history = useHistory();
 
   function goBack() {
@@ -18,7 +21,7 @@ function MainLayout({ children }: Props) {
   }
 
   return (
-    <Container>
+    <Container className={className}>
       <Row justifyContent="center">
         <Col md={6}>
           <Box margin="30px 0 0 0">
