@@ -7,8 +7,10 @@ type Props = {
   label: string;
   type?:
     | 'roundHeavy1'
+    | 'roundSemibold1'
     | 'roundSemibold2'
     | 'roundHeavy3'
+    | 'textSemibold1'
     | 'textRegular1'
     | 'textSemibold2'
     | 'textRegular3';

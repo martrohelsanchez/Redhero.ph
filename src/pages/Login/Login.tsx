@@ -5,12 +5,12 @@ import facebokIconImg from 'src/assets/images/facebookIcon.svg';
 import googleIconImg from 'src/assets/images/googleIcon.png';
 import MainLayout from 'src/Layout/MainLayout';
 
-import * as S from './SignUp.styles';
+import * as S from './Login.styles';
 
 function SignUp() {
-  function signUpWithGoggle() {}
+  function loginWithGoggle() {}
 
-  function signUpWithFacebok() {}
+  function loginWithFacebok() {}
 
   const googleIcon = <img alt="Google Icon" height="33px" src={googleIconImg} />;
   const facebookIcon = <img alt="Facebook Icon" height="33px" src={facebokIconImg} />;
@@ -19,21 +19,21 @@ function SignUp() {
     <MainLayout>
       <Box margin="233px 0 0 0">
         <FlexCenter>
-          <Text label="Sign Up" type="roundHeavy1" />
+          <Text label="Login" type="roundHeavy1" />
         </FlexCenter>
       </Box>
       <S.Bottom>
         <S.GoggleBtn
-          label="Sign up with Google"
+          label="Login with Google"
           leftIcon={googleIcon}
           type="white1"
-          onClick={signUpWithGoggle}
+          onClick={loginWithGoggle}
         />
         <S.FacebookBtn
-          label="Sign up with Facebook"
+          label="Login with Facebook"
           leftIcon={facebookIcon}
           type="white1"
-          onClick={signUpWithFacebok}
+          onClick={loginWithFacebok}
         />
       </S.Bottom>
     </MainLayout>
