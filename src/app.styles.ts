@@ -13,6 +13,10 @@ export default createGlobalStyle<ThemeProps>`
     box-sizing: border-box;
   }
 
+  html, body, #root {
+    height: 100%;
+  }
+
   body {
     background-color: ${(props) => props.theme.colors.primaryBase};
   }
