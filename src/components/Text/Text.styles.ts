@@ -3,8 +3,10 @@ import styled, { css } from 'styled-components';
 type Props = {
   type?:
     | 'roundHeavy1'
+    | 'roundSemibold1'
     | 'roundSemibold2'
     | 'roundHeavy3'
+    | 'textSemibold1'
     | 'textRegular1'
     | 'textSemibold2'
     | 'textRegular3';
@@ -21,6 +23,14 @@ export const Text = styled.p<Props>`
     css`
       font-family: ${(props) => props.theme.fontFamilies.sfProRounded};
       font-weight: ${(props) => props.theme.fontWeights.heavy};
+      font-size: ${(props) => props.theme.fontSizes.round1};
+    `}
+
+  ${(props) =>
+    props.type === 'roundSemibold1' &&
+    css`
+      font-family: ${(props) => props.theme.fontFamilies.sfProRounded};
+      font-weight: ${(props) => props.theme.fontWeights.semibold};
       font-size: ${(props) => props.theme.fontSizes.round1};
     `}
 
@@ -45,6 +55,14 @@ export const Text = styled.p<Props>`
     css`
       font-family: ${(props) => props.theme.fontFamilies.sfProText};
       font-weight: ${(props) => props.theme.fontWeights.regular};
+      font-size: ${(props) => props.theme.fontSizes.text1};
+    `}
+
+  ${(props) =>
+    props.type === 'textSemibold1' &&
+    css`
+      font-family: ${(props) => props.theme.fontFamilies.sfProText};
+      font-weight: ${(props) => props.theme.fontWeights.semibold};
       font-size: ${(props) => props.theme.fontSizes.text1};
     `}
 
