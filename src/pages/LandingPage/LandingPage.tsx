@@ -15,6 +15,12 @@ function LandingPage(props: RouteComponentProps) {
     props.history.push(routes.FIND_BLOOD);
   }
 
+  const messageBubble = user && (
+    <S.Link to={routes.CHAT}>
+      <S.ChatBubble size={30} />
+    </S.Link>
+  );
+
   const signInBtns = !user && (
     <Box margin="52px 0 0 0">
       <Flex flexDirection="column" alignItems="center">
@@ -33,9 +39,7 @@ function LandingPage(props: RouteComponentProps) {
           <Box margin="40px 0 0 0">
             <Flex alignItems="center" justifyContent="space-between">
               <Text label="Redhero" type="roundHeavy1" />
-              <S.Link to={routes.CHAT}>
-                <S.ChatBubble size={30} />
-              </S.Link>
+              {messageBubble}
             </Flex>
           </Box>
           <S.Bottom>

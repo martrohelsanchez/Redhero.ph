@@ -25,7 +25,11 @@ function DonorSignUp(props: RouteComponentProps) {
       user?.id as string,
     );
 
-    history.push(routes.RECOGNITION);
+    if (isDonor) {
+      history.push(routes.RECOGNITION);
+    } else {
+      history.push(routes.DONORS);
+    }
   }
 
   function handleAnswerChange(e: React.ChangeEvent<HTMLInputElement>) {
