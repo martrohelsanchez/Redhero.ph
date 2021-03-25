@@ -9,7 +9,8 @@ type Props = {
     | 'textSemibold1'
     | 'textRegular1'
     | 'textSemibold2'
-    | 'textRegular3';
+    | 'textRegular3'
+    | 'textRegular4';
   color?: string;
 };
 
@@ -58,6 +59,7 @@ export const Text = styled.p<Props>`
       font-size: ${(props) => props.theme.fontSizes.text1};
     `}
 
+
   ${(props) =>
     props.type === 'textSemibold1' &&
     css`
@@ -80,5 +82,13 @@ export const Text = styled.p<Props>`
       font-family: ${(props) => props.theme.fontFamilies.sfProText};
       font-weight: ${(props) => props.theme.fontWeights.regular};
       font-size: ${(props) => props.theme.fontSizes.text3};
+    `}
+
+  ${(props) =>
+    props.type === 'textRegular4' &&
+    css`
+      font-family: ${(props) => props.theme.fontFamilies.sfProText};
+      font-weight: ${(props) => props.theme.fontWeights.regular};
+      font-size: ${(props) => props.theme.fontSizes.text4};
     `}
 `;

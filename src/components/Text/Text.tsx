@@ -13,7 +13,8 @@ type Props = {
     | 'textSemibold1'
     | 'textRegular1'
     | 'textSemibold2'
-    | 'textRegular3';
+    | 'textRegular3'
+    | 'textRegular4';
   color?: string;
   onClick?: (event: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => void;
 };

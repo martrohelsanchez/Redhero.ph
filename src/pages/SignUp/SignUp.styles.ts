@@ -13,7 +13,7 @@ export const Bottom = styled(Flex)`
 
 const SignUpBtn = styled(Button)`
   font-weight: ${(props) => props.theme.fontWeights.semibold};
-  font-size: ${(props) => props.theme.fontSizes.text4};
+  font-size: ${(props) => props.theme.fontSizes.text5};
 `;
 
 export const GoggleBtn = styled(SignUpBtn)`

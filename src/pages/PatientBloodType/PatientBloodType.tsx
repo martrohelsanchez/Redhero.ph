@@ -4,15 +4,23 @@ import { RouteComponentProps } from 'react-router-dom';
 import { Box, Button, Text } from 'src/components';
 import { BLOOD_TYPES } from 'src/constants/blood';
 import routes from 'src/constants/routes';
+import useAuth from 'src/hoooks/useAuth';
 import MainLayout from 'src/Layout/MainLayout';
 
 import * as S from './PatientBloodType.styles';
 
 function PatientBloodType(props: RouteComponentProps) {
+  const { history } = props;
+
+  const { user } = useAuth();
   const [bloodType, setBloodType] = useState('');
 
   function next() {
-    props.history.push(routes.LOGIN_PROMPT);
+    if (user) {
+      history.push(routes.DONORS);
+    } else {
+      history.push(routes.LOGIN_PROMPT);
+    }
   }
 
   const bloodTypes = BLOOD_TYPES.map((bloodType) => (

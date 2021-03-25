@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
 import { Box, Button, Text } from 'src/components';
 import routes from 'src/constants/routes';
+import { UserContext } from 'src/context/userContext';
 import MainLayout from 'src/Layout/MainLayout';
+import * as userService from 'src/services/UserService';
 
 import * as S from './UserInfo1.styles';
 
 function UserInfo1(props: RouteComponentProps) {
   const { history } = props;
 
+  const user = useContext(UserContext);
   const [phoneNumber, setPhoneNumber] = useState('');
 
   function handleNext() {
+    userService.updateUser(
+      {
+        phoneNumber: phoneNumber,
+      },
+      user?.id as string,
+    );
+
     history.push(routes.USER_INFO_2);
   }
 

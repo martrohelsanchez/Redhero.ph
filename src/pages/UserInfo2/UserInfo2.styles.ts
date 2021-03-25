@@ -1,4 +1,5 @@
 import arrowForward from 'mdi-react/ArrowForwardIcon';
+import { Link as link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Bottom = styled.div`
@@ -38,4 +39,8 @@ export const BloodType = styled.option`
 
 export const ArrowForward = styled(arrowForward)`
   color: ${(props) => props.theme.colors.white1};
+`;
+
+export const Link = styled(link)`
+  text-decoration: none;
 `;

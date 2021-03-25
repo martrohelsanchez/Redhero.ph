@@ -1,18 +1,34 @@
-import React, { useState } from 'react';
-import { RouteComponentProps, Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 
 import { Box, Button, Flex, Text } from 'src/components';
 import { BLOOD_TYPES } from 'src/constants/blood';
 import routes from 'src/constants/routes';
+import { UserContext } from 'src/context/userContext';
 import MainLayout from 'src/Layout/MainLayout';
+import * as userService from 'src/services/UserService';
 
 import * as S from './UserInfo2.styles';
 
 function UserInfo2(props: RouteComponentProps) {
+  const { history } = props;
+
+  const user = useContext(UserContext);
   const [bloodType, setBloodType] = useState('');
 
   function next() {
-    props.history.push(routes.LOGIN_PROMPT);
+    try {
+      userService.updateUser(
+        {
+          bloodType: bloodType,
+        },
+        user?.id as string,
+      );
+
+      history.push(routes.DONOR_SIGN_UP);
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   const bloodTypes = BLOOD_TYPES.map((bloodType) => (
@@ -35,14 +51,14 @@ function UserInfo2(props: RouteComponentProps) {
         {bloodTypes}
       </S.SelectBloodType>
       <Box margin="51px 0 0 0">
-        <Link to={routes.DONOR_SIGN_UP}>
+        <S.Link to={routes.DONORS}>
           <Flex>
             <Text label="I don't know my blood type" type="textRegular3" />
             <Box margin="0 0 0 15px">
               <S.ArrowForward size={19} />
             </Box>
           </Flex>
-        </Link>
+        </S.Link>
       </Box>
       <S.Bottom>
         <Button label="Next" isDisabled={!bloodType} type="white1" onClick={next} />

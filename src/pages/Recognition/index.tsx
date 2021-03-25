@@ -1,12 +1,18 @@
 import React from 'react';
-import { Box, Button, Text } from 'src/components';
+import { RouteComponentProps } from 'react-router';
 
+import { Box, Button, Text } from 'src/components';
+import routes from 'src/constants/routes';
 import MainLayout from 'src/Layout/MainLayout';
 
 import * as S from './styles';
 
-function Recognition() {
-  function findDonor() {}
+function Recognition(props: RouteComponentProps) {
+  const { history } = props;
+
+  function findDonor() {
+    history.push(routes.DONORS);
+  }
 
   return (
     <MainLayout>

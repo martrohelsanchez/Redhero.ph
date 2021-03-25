@@ -28,6 +28,7 @@ declare module 'styled-components' {
       text2: string;
       text3: string;
       text4: string;
+      text5: string;
     };
     fontWeights: {
       heavy: number;
@@ -64,7 +65,8 @@ const fontSizes = {
   text1: rem('27px'),
   text2: rem('19px'),
   text3: rem('17px'),
-  text4: rem('21px'),
+  text4: rem('23px'),
+  text5: rem('21px'),
 };
 
 const fontFamilies = {

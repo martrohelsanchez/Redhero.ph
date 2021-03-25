@@ -1,4 +1,6 @@
+import chatBubble from 'mdi-react/ChatBubbleIcon';
 import styled from 'styled-components';
+import { Link as link } from 'react-router-dom';
 
 export const Bottom = styled.div`
   display: flex;
@@ -24,4 +26,13 @@ export const Text = styled.div`
   background-color: ${(props) => props.theme.colors.white1};
   height: 2100px;
   width: 300px;
+`;
+
+export const ChatBubble = styled(chatBubble)`
+  color: ${(props) => props.theme.colors.white1};
+  cursor: pointer;
+`;
+
+export const Link = styled(link)`
+  text-decoration: none;
 `;

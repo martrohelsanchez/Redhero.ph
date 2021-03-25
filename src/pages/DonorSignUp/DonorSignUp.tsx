@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Box } from 'src/components';
 import routes from 'src/constants/routes';
-
+import { UserContext } from 'src/context/userContext';
 import MainLayout from 'src/Layout/MainLayout';
+import * as userService from 'src/services/UserService';
 
 import * as S from './DonorSignUp.styles';
 
@@ -13,9 +14,17 @@ const NOT_DONOR = 'not-donor';
 function DonorSignUp(props: RouteComponentProps) {
   const { history } = props;
 
-  const [isDonor, setIsDonor] = useState<undefined | boolean>(undefined);
+  const user = useContext(UserContext);
+  const [isDonor, setIsDonor] = useState<boolean>(true);
 
-  function handleNext() {
+  async function handleNext() {
+    await userService.updateUser(
+      {
+        isDonor: isDonor,
+      },
+      user?.id as string,
+    );
+
     history.push(routes.RECOGNITION);
   }
 
