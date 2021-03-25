@@ -25,7 +25,11 @@ function App() {
   const { isLoading, user } = useAuth();
 
   if (isLoading) {
-    return <LoadingPage />;
+    return (
+      <Router>
+        <LoadingPage />
+      </Router>
+    );
   }
 
   const isAuthenticated = !!user;
