@@ -22,7 +22,7 @@ function SignUp(props: RouteComponentProps) {
 
   async function signUpWithGoggle() {
     try {
-      await auth.signInWithRedirect(googleProvider);
+      await auth.signInWithPopup(googleProvider);
 
       history.push(routes.USER_INFO_1);
     } catch (e) {
