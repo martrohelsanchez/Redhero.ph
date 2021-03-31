@@ -5,6 +5,7 @@ import { UserContext } from 'src/context/userContext';
 
 import { Box, Button, Flex, Text } from 'src/components';
 import routes from 'src/constants/routes';
+import { auth } from 'src/firebase';
 
 import * as S from './LadingPage.styles';
 
@@ -13,6 +14,12 @@ function LandingPage(props: RouteComponentProps) {
 
   function handleFindBlood() {
     props.history.push(routes.FIND_BLOOD);
+  }
+
+  async function handleLogOut() {
+    console.log('asdfasdf');
+
+    await auth.signOut();
   }
 
   const messageBubble = user && (
@@ -38,7 +45,7 @@ function LandingPage(props: RouteComponentProps) {
         <Col md={6}>
           <Box margin="40px 0 0 0">
             <Flex alignItems="center" justifyContent="space-between">
-              <Text label="Redhero" type="roundHeavy1" />
+              <Text label="Redhero" type="roundHeavy1" onClick={handleLogOut} />
               {messageBubble}
             </Flex>
           </Box>
