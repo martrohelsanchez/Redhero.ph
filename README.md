@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+![redhero logo](https://user-images.githubusercontent.com/62787427/130324477-57dfde2e-e163-46d0-99f8-564d4193ef0b.png)
+# Redhero.ph
+A personal project that attempts to give Filipino people universal and easy access to safe blood.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project won the Executive's Choice award given by the Developer Student Clubs UP Diliman
+
+## Available Scripts
+Technologies used: 
+* React.js
+* Typescript
+* Styled-components
+* Firebase authentication
+* Firestore
+* React-router
 
 ## Available Scripts
 
